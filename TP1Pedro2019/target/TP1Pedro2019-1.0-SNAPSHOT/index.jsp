@@ -12,7 +12,7 @@
 		<title> Como criar um formulário completo em HTML </title>
 		<meta name="description" content="Aprenda a criar um site completo que usa formulários em HTML">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
-		<style type="text/css" >
+		<style type="text/css">
 			input, textarea, select {
 				display: block;
 				margin-bottom: 10px; 
@@ -28,9 +28,9 @@
 	<body>
 		<h1> Formulário HTML js</h1> 
 		<h2> Preencha o formulário abaixo</h2><br />
-			<form oninput="x.value=parseInt(a.value)" action="/MeuPrimeiroServlet" method="post">
+			<form oninput="x.value=parseInt(a.value)" action="MeuPrimeiroServlet" method="post">
 				<fieldset>
-					<legend>Dados Pessoais</legend>
+                        		<legend>Dados Pessoais</legend>
 					<div>
 						<input type="hidden" name="oculto" value="emJs">
 						<label for="nome">Nome: </label>
