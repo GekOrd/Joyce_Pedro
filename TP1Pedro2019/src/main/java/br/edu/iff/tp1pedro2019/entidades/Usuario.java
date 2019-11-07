@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.edu.iff.tp1pedro2019;
+package br.edu.iff.tp1pedro2019.entidades;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
