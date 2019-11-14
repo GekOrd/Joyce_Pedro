@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : index
     Created on : 17/10/2019, 09:26:00
     Author     : aluno
@@ -40,7 +40,7 @@
                     <input type="text" name="sobrenome">
                 </div>
                 <br><br>
-                <div>
+                <%--div>
                     <label>Nascimento: </label>
                     <label for="data">Data de nascimento: </label> 
                     <input type="date" name="data">
@@ -92,7 +92,7 @@
                         <option value="php">PHP</option> 
                         <option value="go">Go</option> 
                     </select>
-                </div>
+                </div--%>
             </fieldset>
             <fieldset>
                 <legend>Dados de documentos</legend>
@@ -106,7 +106,7 @@
                 </div>
             </fieldset>
             <br>
-            <fieldset>
+            <%--fieldset>
                 <legend>Dados de Endereço</legend>
                 <div>
                     <label for="rua">Rua:</label> 
@@ -158,7 +158,7 @@
                     <label for="cep">CEP: </label>
                     <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
                 </div>
-            </fieldset>
+            </fieldset--%>
             <br>
             <fieldset>
                 <legend>Dados de login</legend>
