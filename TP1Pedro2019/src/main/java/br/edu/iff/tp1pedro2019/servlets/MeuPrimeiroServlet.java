@@ -1,10 +1,6 @@
 package br.edu.iff.tp1pedro2019.servlets;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 import br.edu.iff.tp1pedro2019.entidades.Usuario;
 import br.edu.iff.tp1pedro2019.utilidades.HibernateUtil;
 import java.io.IOException;
@@ -17,21 +13,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-/**
- *
- * @author aluno
- */
+
 public class MeuPrimeiroServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String nome = request.getParameter("nome");
@@ -39,10 +24,14 @@ public class MeuPrimeiroServlet extends HttpServlet {
         String nomeCompleto = nome + " " + sobrenome;
         System.out.println("Nome completo:" + nomeCompleto);
         String senha = request.getParameter("senha");
+        String cidade = request.getParameter("cidade");
+        String cep = request.getParameter("cep");
 
         Usuario user = new Usuario();
         user.setNome(nomeCompleto);
         user.setSenha(senha);
+        user.setEndMunicipio(cidade);
+        user.setEndCep(Integer.SIZE);
 
         Double aleatorio = Math.random();
         BigDecimal id = new BigDecimal(aleatorio);
@@ -53,7 +42,7 @@ public class MeuPrimeiroServlet extends HttpServlet {
         sessaoBD.save(user);
         tr.commit();
         sessaoBD.close();
-
+        
         response.sendRedirect("ordePecyoJ.jsp");
     }
 

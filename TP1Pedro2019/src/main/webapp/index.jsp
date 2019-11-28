@@ -17,9 +17,7 @@
                 display: block;
                 margin-bottom: 10px; 
             }
-            /*div.sexo {
-            display: inline;
-            }*/
+            
             input[type=radio], input[type=range], input[type=date],input[type=checkbox]{
                 display: inline;
             }
@@ -106,7 +104,7 @@
                 </div>
             </fieldset>
             <br>
-            <%--fieldset>
+            <fieldset>
                 <legend>Dados de Endereço</legend>
                 <div>
                     <label for="rua">Rua:</label> 
@@ -158,7 +156,7 @@
                     <label for="cep">CEP: </label>
                     <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
                 </div>
-            </fieldset--%>
+            </fieldset>
             <br>
             <fieldset>
                 <legend>Dados de login</legend>

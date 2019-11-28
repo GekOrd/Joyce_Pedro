@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package br.edu.iff.tp1pedro2019.entidades;
 
 import java.io.Serializable;
@@ -18,10 +14,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author aluno
- */
+
 @Entity
 @Table(name = "usuario")
 @XmlRootElement
@@ -32,8 +25,19 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Usuario.findBySenha", query = "SELECT u FROM Usuario u WHERE u.senha = :senha")})
 public class Usuario implements Serializable {
 
+    @Size(max = 20)
+    @Column(name = "doc_rg")
+    private String docRg;
+    @Column(name = "doc_cpf")
+    private Long docCpf;
+    @Size(max = 50)
+    @Column(name = "end_municipio")
+    private String endMunicipio;
+    @Column(name = "end_cep")
+    private Integer endCep;
+
     private static final long serialVersionUID = 1L;
-    // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
+    
     @Id
     @Basic(optional = false)
     @NotNull
@@ -100,6 +104,38 @@ public class Usuario implements Serializable {
     @Override
     public String toString() {
         return "br.edu.iff.tp1pedro2019.Usuario[ idUsuario=" + idUsuario + " ]";
+    }
+
+    public String getDocRg() {
+        return docRg;
+    }
+
+    public void setDocRg(String docRg) {
+        this.docRg = docRg;
+    }
+
+    public Long getDocCpf() {
+        return docCpf;
+    }
+
+    public void setDocCpf(Long docCpf) {
+        this.docCpf = docCpf;
+    }
+
+    public String getEndMunicipio() {
+        return endMunicipio;
+    }
+
+    public void setEndMunicipio(String endMunicipio) {
+        this.endMunicipio = endMunicipio;
+    }
+
+    public Integer getEndCep() {
+        return endCep;
+    }
+
+    public void setEndCep(Integer endCep) {
+        this.endCep = endCep;
     }
     
 }
